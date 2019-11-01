@@ -1,10 +1,12 @@
 import {combineReducers} from 'redux';
 
-const initialTestStore = {test: 'test'};
-
-export const rootReducer = (store = initialTestStore, action) => {
-    if (action.type === 'test') {
-        return { test: 'test' };
+export const rootReducer = (store = {}, {type, payload}) => {
+    switch (type) {
+        case 'test':
+            return { ...store, test: 'test' };
+        default:
+            return store;
     }
+
     return store;
 }
