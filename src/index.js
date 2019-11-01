@@ -11,4 +11,4 @@ const RootComponent = (
   </Provider>
 );
 
-ReactDOM.render(<RootComponent />, document.getElementById('root'));
+ReactDOM.render(RootComponent, document.getElementById('root'));

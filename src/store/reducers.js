@@ -1,4 +1,10 @@
 import {combineReducers} from 'redux';
-export const rootReducer = (store, action) => {
+
+const initialTestStore = {test: 'test'};
+
+export const rootReducer = (store = initialTestStore, action) => {
+    if (action.type === 'test') {
+        return { test: 'test' };
+    }
     return store;
 }
